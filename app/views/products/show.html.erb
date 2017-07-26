@@ -7,7 +7,7 @@
 
 <p>
   <strong>Discription:</strong>
-  <%= @product.discription %>
+  <%= @product.discription.html_safe %>
 </p>
 
 <p>
@@ -20,5 +20,5 @@
   <%= @product.price %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary' %>
+<%= link_to 'Back', products_path, class: 'btn btn-outline-secondary' %>
