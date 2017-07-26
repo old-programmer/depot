@@ -1,0 +1,15 @@
+# To connect Russian 
+ru:
+  common:
+    errors: 'При заполнении формы возникли ошибки'
+    back: 'Назад'
+  products:
+    index:
+      title: 'Продукты'
+    new:
+      title: 'Новая продукт'
+    edit:
+      title: 'Редактирование продукта'
+    form:
+      submit:
+        '%{action} продукт'

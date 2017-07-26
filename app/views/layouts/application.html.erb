@@ -3,12 +3,30 @@
   <head>
     <title>Depot</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class='<%= controller.controller_name %>'>
-    <%= yield %>
+    <div class="container">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #f0f0f0; margin-top: 5px;">
+        <a class="navbar-brand" href="#">Web Store</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="<%= products_path %>">Перечень товаров<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <%= link_to 'Новый продукт', new_product_path, class: 'btn btn-outline-primary pull-xs-right' %>
+        </div>
+      </nav>
+		</div>	
+
+		<div class="container">
+    	<%= yield %>
+    </div>
   </body>
 </html>

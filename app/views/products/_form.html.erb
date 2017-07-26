@@ -11,27 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :product_title %>
+    <%= form.text_field :title, id: :product_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :discription %>
-    <%= form.text_area :discription, id: :product_discription, rows: 6 %>
+    <%= form.text_area :discription, id: :product_discription, rows: 6, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :product_image_url %>
+    <%= form.text_field :image_url, id: :product_image_url, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :price %>
-    <%= form.text_field :price, id: :product_price %>
+    <%= form.text_field :price, id: :product_price, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit t('.submit', action: @product.new_record? ? 'Создать' : 'Изменить'), class: 'btn btn-primary' %>
+    <%= link_to t('common.back'), :back, class: 'btn btn-outline-secondary' %>
   </div>
+
+  
 <% end %>

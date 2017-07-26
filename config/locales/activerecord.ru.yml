@@ -1,0 +1,14 @@
+# Localization ActiveRekord
+ru:
+  activerecord:
+    models:
+      product: 'Продукт'
+    attributes:
+      product:
+        title: 'Название'
+        discription: 'Описание'
+        image_url: 'Картинка (jpg, jpeg, png)'
+        price: 'Цена'
+    errors:
+      messages:
+        blank: 'не может быть пустым'
