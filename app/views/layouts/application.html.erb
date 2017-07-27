@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Depot</title>
+    <title>Pragprog Books Online Store</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class='<%= controller.controller_name %>'>
     <div class="container">
-      <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #f0f0f0; margin-top: 5px;">
-        <a class="navbar-brand" href="#">Web Store</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="<%= products_path %>">Перечень товаров<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
-            </li>
-          </ul>
-          <%= link_to 'Новый продукт', new_product_path, class: 'btn btn-outline-primary pull-xs-right' %>
+      <div class="row">
+        <div id="banner" class="col-md-12">
+          <%= image_tag("logo.png") %>
+          <%= @page_title || "Pragmatic Bookshelf" %>
         </div>
-      </nav>
+      </div>
 		</div>	
 
-		<div class="container">
-    	<%= yield %>
+    <div id="columns" class="container main ">
+      <div class="row">
+
+        <div id="side" class="col-md-2">
+          <ul>
+            <li><a href="http://www....">Home</a></li>
+            <li><a href="http://www..../faq">Questions</a></li>
+            <li><a href="http://www..../news">News</a></li>
+            <li><a href="http://www..../contact">Contact</a></li>
+          </ul>
+        </div>
+
+  		  <div id="main" class="col-md-10">
+      	 <%= yield %>
+        </div>
+
     </div>
   </body>
 </html>

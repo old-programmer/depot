@@ -3,13 +3,13 @@
 <% end %>
 
 <h1>Your Pragmatic Catalog</h1>
-<% @products.each do |product| %>
-	<div class="entry">
-		<%= image_tag(product.image_url) %>
-		<h3><%= product.title %></h3>
-		<%= sanitize(product.discription) %>
-		<div class="price_line">
-			<span class="price"><%= product.price %></span>
+	<% @products.each do |product| %>
+		<div class="entry">
+			<%= image_tag(product.image_url) %>
+			<h3><%= product.title %></h3>
+			<%= sanitize(product.discription) %>
+			<div class="price_line">
+				<span class="price"><%= number_to_currency(product.price) %></span>
+			</div>
 		</div>
-	</div>
-<% end %>
+	<% end %>
