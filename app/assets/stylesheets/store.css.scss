@@ -40,6 +40,14 @@
       margin-bottom: 0.8em; 
     }
 
+    form, div {
+      display: inline;
+      .btn {
+        margin-bottom: 0.5em;
+        float: right;
+      }
+    }
+
     .price {
       color: #44a;
       font-weight: bold;

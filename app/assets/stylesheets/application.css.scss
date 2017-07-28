@@ -17,6 +17,13 @@
  */
 @import "bootstrap";
 
+time {
+  display: block;
+  color: #fff;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
 #banner {
   background: #cfc;
   padding: 10px;
