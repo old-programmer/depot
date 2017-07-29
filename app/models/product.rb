@@ -12,6 +12,10 @@ class Product < ApplicationRecord
 						 # must be a URL for GIF, JPG or PNG image.'
 	}
 
+	def self.latest
+  	Product.order(:updated_at).last
+	end
+
 	private
 
 	# убеждаемся в отсутствии товарных позиций, ссылающихся на данный товар

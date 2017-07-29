@@ -22,9 +22,11 @@
 
         <div id="side" class="col-md-3">
           <time><%= Time.zone.now.to_s(:ru_datetime) %></time> 
- 
-          <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-            <%= render @cart %>
+          
+          <% if @cart %>
+            <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+              <%= render @cart %>
+            <% end %>
           <% end %>
 
           <ul>
