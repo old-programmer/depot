@@ -54,4 +54,6 @@ Rails.application.configure do
 
   # Time::DATE_FORMATS[:ru_datetime] = "%Y.%m.%d, %k:%M:%S"
   Time::DATE_FORMATS[:ru_datetime] = "%Y.%m.%d  %k:%M"
+
+  config.action_controller.perform_caching = false
 end
