@@ -14,7 +14,7 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
-    config.action_controller.perform_caching = true
+    config.action_controller.perform_caching = false
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
@@ -22,7 +22,6 @@ Rails.application.configure do
     }
   else
     config.action_controller.perform_caching = false
-
     config.cache_store = :null_store
   end
 
@@ -30,6 +29,10 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
+
+  Depot::Application.configure do
+    config.action_mailer.delivery_method = :test
+  end
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -55,5 +58,4 @@ Rails.application.configure do
   # Time::DATE_FORMATS[:ru_datetime] = "%Y.%m.%d, %k:%M:%S"
   Time::DATE_FORMATS[:ru_datetime] = "%Y.%m.%d  %k:%M"
 
-  config.action_controller.perform_caching = false
 end
