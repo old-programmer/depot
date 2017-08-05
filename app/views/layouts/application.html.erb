@@ -50,7 +50,27 @@
         </div>
 
   		  <div id="main" class="col-md-9">
-      	 <%= yield %>
+<!--      <% params.each do |p| %>
+            <%= p %><br>
+          <% end %>
+-->
+<!--      	  
+<h4>Запрос</h4> <%= debug(request) %>
+<h4>Параметры</h4> <%= debug(params) %>
+<h4>Ответ</h4> <%= debug(response) %>
+-->
+<!-- <p>
+<ul>
+<% %w{ создать перечислить изменить сохранить выйти }.each do |action| %>
+<li>
+<%= link_to_unless_current(action.capitalize) %>
+</li>
+<% end %>
+</ul>
+</p>
+ -->
+
+       <%= yield %>
         </div>
 
     </div>

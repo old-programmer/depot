@@ -57,5 +57,6 @@ Rails.application.configure do
 
   # Time::DATE_FORMATS[:ru_datetime] = "%Y.%m.%d, %k:%M:%S"
   Time::DATE_FORMATS[:ru_datetime] = "%Y.%m.%d  %k:%M"
+  Time::DATE_FORMATS[:ru_datetime_2] = "%e %b %Y, %a,  %H:%M"
 
 end
