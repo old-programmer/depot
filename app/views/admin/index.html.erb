@@ -1,3 +1,3 @@
 <h1>Добро пожаловать</h1>
 <time style="color: #141;"><%= Time.zone.now.to_s(:ru_datetime_2) %></time>
-У нас имеется <%= pluralize(@total_orders, "order") %>
+У нас имеется <%= pluralize(@total_orders, "order(s)") %>

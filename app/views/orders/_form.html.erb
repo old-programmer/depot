@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :order_name, size: 40 %>
+    <%= form.text_field :name, id: :order_name, size: 40, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :address %>
-    <%= form.text_area :address, id: :order_address, rows: 3, cols: 39 %>
+    <%= form.text_area :address, id: :order_address, rows: 3, cols: 39, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
-    <%= form.text_field :email, id: :order_email, size: 40 %>
+    <%= form.text_field :email, id: :order_email, size: 40, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :pay_type %>
-    <%= form.select :pay_type, Order::PAYMENT_TYPES, id: :order_pay_type, prompt: 'Select a payment method' %>
+    <%= form.select :pay_type, Order::PAYMENT_TYPES, id: :order_pay_type, prompt: 'Select a payment method', class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit 'Place Order' %>
+  <div class="actions form-group">
+    <%= form.submit 'Place Order', class: 'btn btn-outline-success' %>
   </div>
 <% end %>
