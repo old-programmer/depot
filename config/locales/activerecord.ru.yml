@@ -2,13 +2,24 @@
 ru:
   activerecord:
     models:
-      product: 'Продукт'
+      products: 'Продукт'
+      orders: 'Заказы'
+      carts: 'Корзины покупателей'
     attributes:
       product:
         title: 'Название'
         discription: 'Описание'
         image_url: 'Картинка (jpg, jpeg, png)'
         price: 'Цена'
+      order:
+        name: 'Наименование'
+        address: 'Адрес'
+        email: 'eMail'
+        pay_type: 'Тип оплаты'
+      user:
+        name: 'Имя'
+        password: 'Пароль'
+        password_confirmation: 'Повтор пароля'
     errors:
       messages:
         blank: 'не может быть пустым'

@@ -1,8 +1,10 @@
-<h1>Listing Users</h1>
+<h1><%= t('.title') %></h1>
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
 
+<%= link_to 'New User', new_user_path, class: 'btn btn-outline-success btn-sm' %>
+<br><br>
 <table>
   <thead>
     <tr>
@@ -25,4 +27,3 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>

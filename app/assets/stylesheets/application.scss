@@ -51,6 +51,18 @@ time {
   #main {
     padding: 1em;
     background: white;
+
+
+    table.order {
+      border-top: 1px dotted #595;
+      border-bottom: 1px dotted #595;
+      margin-bottom: 10px;
+      th { padding-left: 0.5em;}
+      tr {
+        border-top: 1px dotted #595;
+      }
+    }
+
   }
 
   #side {
@@ -65,7 +77,6 @@ time {
     input {
       font-size: small;
     }
-
     #cart {
       font-size: smaller;
       color: white;
@@ -78,10 +89,9 @@ time {
 
     ul {
       padding: 0;
-
+      margin-top: 20px;
       li {
         list-style: none;
-
         a {
           color: #bfb;
           font-size: 0.9em;

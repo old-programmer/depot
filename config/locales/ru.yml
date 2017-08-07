@@ -13,3 +13,31 @@ ru:
     form:
       submit:
         '%{action} продукт'
+  orders:
+    index:
+      title: 'Заказы'
+      name: 'Имя'
+      address: 'Адрес'
+      email: 'eMail'
+      pay_type: 'Тип оплаты'
+      new_order: 'Новый заказ'
+    new:
+      title: 'Новая заказ'
+    edit:
+      title: 'Редактирование заказа'
+    form:
+      submit:
+        '%{action} заказ'
+  carts:
+    index:
+      title: 'Корзины покупателей'
+  users:
+    index:
+      title: 'Список пользователей'
+    new:
+      title: 'Новый пользователь'
+    edit:
+      title: 'Редактирование пользователя'
+    form:
+      submit:
+        '%{action} пользователя'
